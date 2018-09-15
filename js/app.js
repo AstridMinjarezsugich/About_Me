@@ -9,6 +9,8 @@ var userName = prompt ('Hello, what\'s your name?');
 console.log('What is your name? : ' + userName);
 
 //Coding experience question
+var experienceQuestion = function(){
+
 var coding = prompt ('Do I have Coding experience?');
 coding = coding.toLowerCase();
 
@@ -21,8 +23,11 @@ if (coding === 'yes' || coding === 'y'){
             alert('Please respond using yes or no or y or n.');
          }
          console.log('Do I have Coding Experience? : ' + coding);
+return experienceQuestion;
+};
 
 // Party question
+var partyQuestion = function(){
 var party = prompt ('Do I like to party like it\'s 1999?');
 party = party.toLowerCase();
 
@@ -36,8 +41,12 @@ if (party === 'yes' || party === 'y'){
          }
 
      console.log('Do I like to party like it\'s 1999? : ' + party);
+return partyQuestion;
+};
 
 //College question
+var collegeQuestion = function(){
+
 var college = prompt ('Did I complete college education?');
 college = college.toLowerCase();
 
@@ -51,8 +60,12 @@ if (college === 'no' || college === 'n'){
          }
 
      console.log('Did I complete college education? : ' + college);
+return collegeQuestion;
+}
 
 //Middle name question
+var middleNameQuestion = function(){
+
 var middleName = prompt ('Do I have a middle name?');
 middleName = middleName.toLowerCase();
 
@@ -66,8 +79,12 @@ if (middleName === 'yes' || middleName === 'y'){
 }
 
 console.log('Do I have a middle name? : ' + middleName);
+return middleNameQuestion;
+}
 
 //Life
+var lifeQuestion = function(){
+
 var life = prompt ('Do I believe in the possability of life in outerspace?');
 life = life.toLowerCase();
 
@@ -81,8 +98,11 @@ if (life === 'yes' || life === 'y'){
 }
 
 console.log('Do I believe in the possability of life in outerspace? : ' + life);
+return lifeQuestion;
+}
 
 //number question
+var coffeeQuestion = function(){
 
 var cupsPerDay = 4;
 var cups = prompt('How many cups of coffee did I drink today?');
@@ -105,8 +125,11 @@ for (var attempts = 0; attempts < 4; attempts++){
 
 }
 console.log('How many cups of coffee did I drink today? : ' + cups);
+return coffeeQuestion;
+}
 
 //Multiple choice Question
+var fruitQuestion = function(){
 var multipleChoice = ['orange', 'strawberry', 'banana', 'mango', 'pomagranate','cucumber']
 var correctAnswer = false;
 var guessCounter = 6;
@@ -131,7 +154,23 @@ do{
     } 
     guessCounter--;
 } while(guessCounter > 0 && !correctAnswer);
+return fruitQuestion;
+}
+
+//Quiz Score
+var quizScore = function(){
 
 console.log(correctResponse);
 alert('You answer ' + correctResponse + ' out of 7 questions correctly');
+return quizScore;
+}
 
+//functions to call
+experienceQuestion();
+partyQuestion();
+collegeQuestion();
+middleNameQuestion();
+lifeQuestion();
+coffeeQuestion();
+fruitQuestion();
+quizScore();
